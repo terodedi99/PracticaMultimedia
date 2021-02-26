@@ -1,0 +1,266 @@
+[{
+        "sources": [{
+            "src": "assets/la_fotosintesis.mp4",
+            "type": "video/mp4"
+        }],
+
+        "poster": "assets/la_fotosintesis.PNG",
+        "quitz": [{
+                "init": 34,
+                "question": "La fotosíntesis sirve para que las plantas se alimenten",
+                "answers": ["Verdadero", "Falso"],
+                "corrent_answer": "Verdadero",
+                "change_time_if_error": true,
+                "new_time": 22
+            }, {
+                "init": 59,
+                "question": "¿Cuál de los siguientes alimentos no es necesario para realizar la fotosíntesis?",
+                "answers": ["Luz solar", "Agua", "Insectos", "Clorofila"],
+                "corrent_answer": "Insectos",
+                "change_time_if_error": true,
+                "new_time": 35
+            }, {
+                "init": 66,
+                "question": "¿Qué de da el color verde a las plantas?",
+                "answers": ["Sales minerales", "Clorofila", "Agua"],
+                "corrent_answer": "Clorofila",
+                "change_time_if_error": true,
+                "new_time": 60
+            }
+
+        ],
+        "overlay": {
+            "content": "Primer video interactivo",
+            "debug": "false",
+            "class": "overCss",
+            "overlays": [{
+                    "content": "¡Bienvenido/a al primer video interactivo!",
+                    "start": 1,
+                    "end": 4,
+                    "align": "bottom-left"
+                }, {
+                    "content": "Hoy aprenderemos qué es la fotosíntesis",
+                    "start": 5,
+                    "end": 14,
+                    "align": "center"
+                },
+                {
+                    "content": "Recuerda que cuando contestes correctamente una pregunta, ésta no volverá a aparecer",
+                    "start": 4,
+                    "end": 10,
+                    "align": "bottom-right"
+                }, {
+                    "content": "A través de las raíces la planta absorbe tanto el agua como las sales minerales",
+                    "start": 76,
+                    "end": 87,
+                    "align": "top-right"
+                },
+                {
+                    "content": "¡Muchas gracias por ver el vídeo!",
+                    "start": 90,
+                    "end": "end",
+                    "align": "center"
+                }
+            ]
+        }
+    }, {
+        "sources": [{
+            "src": "assets/los_aracnidos.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/los_aracnidos.PNG",
+        "quitz": [{
+                "init": 35,
+                "question": "Los arácnidos son invertebrados",
+                "answers": ["Verdadero", "Falso"],
+                "corrent_answer": "Verdadero",
+                "change_time_if_error": true,
+                "new_time": 28
+            }, {
+                "init": 50,
+                "question": "¿Cuántas patas tienen los arácnidos?",
+                "answers": ["Ocho patas", "Seis patas"],
+                "corrent_answer": "Ocho patas",
+                "change_time_if_error": true,
+                "new_time": 42
+            }, {
+                "init": 78,
+                "question": "¿Cuál es una característica de los arácnidos?",
+                "answers": ["Alas", "Quelíceros", "Antenas"],
+                "corrent_answer": "Quelíceros",
+                "change_time_if_error": true,
+                "new_time": 66
+            }
+
+        ],
+        "overlay": {
+            "content": "Segundo video interactivo",
+            "debug": "false",
+            "class": "overCss",
+            "overlays": [{
+                    "content": "¡Bienvenido/a al segundo video interactivo!",
+                    "start": 1,
+                    "end": 4,
+                    "align": "bottom-left"
+                }, {
+                    "content": "Recuerda que cuando contestes correctamente una pregunta, ésta no volverá a aparecer",
+                    "start": 4,
+                    "end": 10,
+                    "align": "bottom-right"
+                },
+                {
+                    "content": "Hoy aprenderemos sobre los arácnidos",
+                    "start": 5,
+                    "end": 14,
+                    "align": "center"
+                },
+                {
+                    "content": "Los arácnidos forman un grupo de animales distinto al de los insectos",
+                    "start": 38,
+                    "end": 42,
+                    "align": "top-left"
+                },
+                {
+                    "content": "¡Muchas gracias por ver el vídeo!",
+                    "start": 90,
+                    "end": "end",
+                    "align": "center"
+                }
+            ]
+        }
+    }, {
+        "sources": [{
+            "src": "assets/el_dia_y_la_noche.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/el_dia_y_la_noche.PNG",
+        "quitz": [{
+                "init": 36,
+                "question": "La Tierra siempre está girando sobre sí misma",
+                "answers": ["Verdadero", "Falso"],
+                "corrent_answer": "Verdadero",
+                "change_time_if_error": true,
+                "new_time": 25
+            }, {
+                "init": 42,
+                "question": "El movimiento de rotación es el que realiza la tierra al girar sobre sí misma",
+                "answers": ["Verdadera", "Falso"],
+                "corrent_answer": "Verdadera",
+                "change_time_if_error": true,
+                "new_time": 37
+            }, {
+                "init": 78,
+                "question": "¿Cuánto tarda la tierra en dar una vuelta sobre sí misma?",
+                "answers": ["24 horas", "365 días", "2 días"],
+                "corrent_answer": "24 horas",
+                "change_time_if_error": true,
+                "new_time": 51
+            }
+
+        ],
+        "overlay": {
+            "content": "Tercer video interactivo",
+            "debug": "false",
+            "class": "overCss",
+            "overlays": [{
+                    "content": "¡Bienvenido/a al tercer video interactivo!",
+                    "start": 1,
+                    "end": 4,
+                    "align": "bottom-left"
+                }, {
+                    "content": "Hoy aprenderemos sobre el día y la noche",
+                    "start": 5,
+                    "end": 14,
+                    "align": "center"
+                }, {
+                    "content": "Recuerda que cuando contestes correctamente una pregunta, ésta no volverá a aparecer",
+                    "start": 4,
+                    "end": 10,
+                    "align": "bottom-right"
+                },
+                {
+                    "content": "Este es nuestro planeta",
+                    "start": 24,
+                    "end": 29,
+                    "align": "bottom-left"
+                },
+                {
+                    "content": "¡Muchas gracias por ver el vídeo!",
+                    "start": 90,
+                    "end": "end",
+                    "align": "center"
+                }
+            ]
+        }
+    },
+    {
+        "sources": [{
+            "src": "assets/video1.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video1.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video2.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video2.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video3.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video3.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video4.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video4.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video5.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video5.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video6.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video6.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video7.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video7.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video8.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video8.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video9.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video9.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video10.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video10.PNG"
+    }
+]

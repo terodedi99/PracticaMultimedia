@@ -1,0 +1,26 @@
+<div class="d-flex jc-center at-center w100">
+    <img class="logoyt" src="/assets/img/youtube.png" alt="logo de Youtube" />
+</div>
+<div class="contenido d-flex jc-center at-center" mat-dialog-content>
+    <p></p>
+    <mat-form-field style="width: 100%">
+        <span>Introduce la URL del video a reproducir: </span>
+        <h4></h4>
+        <input matInput type="text" [(ngModel)]="this.data.url">
+    </mat-form-field>
+</div>
+<div class="botones d-flex jc-center at-center" mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Volver</button>
+    <button mat-button [mat-dialog-close]="data" (click)="onClick(data)" cdkFocusInitial>Cargar</button>
+</div>
+<style>
+    .logoyt {
+        max-width: 100%;
+        width: 75px;
+    }
+    
+    .contenido {
+        max-width: 100%;
+        text-align: center;
+    }
+</style>

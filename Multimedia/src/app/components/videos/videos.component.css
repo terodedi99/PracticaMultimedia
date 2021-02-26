@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Montserrat:wght@100;300;400;600;700;800&family=Open+Sans:wght@300;400;600;700;800&family=Raleway:wght@100;300;400;600;700;800&family=Roboto:wght@100;300;400;700&display=swap');
+:root {
+    --tileWidth: 230px;
+    --tileHeight: calc(var(--tileWidth) / (16/9));
+    --moveLeft: calc(-1 * (var(--tileWidth) * (var(--growFactor) - 1) / 2));
+    --moveRight: calc(var(--tileWidth) * (var(--growFactor) - 1));
+    --growFactor: 1.5;
+    /* 2.0 times the original size */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #ffffff;
+}
+
+header {
+    background: radial-gradient(#FF5F6D, #FFC371);
+    color: #fff;
+    text-align: center;
+    padding: 60px;
+    height: 375px;
+    top: 0;
+}
+
+header .titulo {
+    font-family: monaco, Consolas, "Lucida Console", monospace !important;
+    font-size: 78px;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 0px #d5d5d5, 5px 5px 0px #FF5F6D;
+    padding: 9px;
+}
+
+main {
+    margin-top: -22rem;
+}
+
+main .contenedor {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+@media (min-width: 1300px) {
+    main .contenedor {
+        max-width: 70%;
+    }
+}
+
+.row-header {
+    font-family: monaco, Consolas, "Lucida Console", monospace !important;
+    font-size: 60px;
+    color: #FF5F6D!important;
+    text-align: center;
+    color: #ffba5b;
+    margin-bottom: 15px;
+}
+
+.previous {
+    font-size: 20px;
+    background-color: transparent;
+    color: #FF5F6D!important;
+    border: 2px solid #FF5F6D;
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+
+.left {
+    transform: rotate(180deg);
+}
+
+.next {
+    font-size: 20px;
+    background-color: transparent;
+    color: #FF5F6D!important;
+    border: 2px solid #FF5F6D;
+    border-radius: 7px;
+    padding: 10px 20px;
+}
+
+.previous:hover {
+    background-color: #FF5F6D!important;
+    color: white!important;
+    text-decoration: none;
+}
+
+.next:hover {
+    background-color: #FF5F6D!important;
+    color: white!important;
+    text-decoration: none;
+}
+
+.video-js {
+    width: 100%;
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, .5);
+    font-size: 16px!important;
+    color: #FAFAFA;
+}
+
+.my-video .vjs-default-skin .vjs-big-play-button {
+    font-size: 25px;
+    line-height: 45px;
+    height: 45px;
+    width: 30px;
+    border: 2px solid #fff;
+    border-radius: 9px;
+    /* Alineado en el centro */
+    left: 50%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -22.5px;
+}
+
+.video-js .vjs-big-play-button {
+    height: 100px!important;
+    width: 100px!important;
+    border-radius: 68px!important;
+}
+
+.video-js .vjs-big-play-button .vjs-icon-placeholder:before {
+    margin-top: 14px;
+    font-size: 65px;
+}
+
+.video-js .vjs-control-bar,
+.video-js .vjs-big-play-button,
+.video-js .vjs-menu-button .vjs-menu-content {
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* Slider - used for Volume bar and Progress bar */
+
+.video-js .vjs-slider {
+    background-color: #73859f;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.video-js .vjs-volume-level,
+.video-js .vjs-play-progress,
+.video-js .vjs-slider-bar {
+    background: #FF5F6D!important;
+}
+
+.video-js .vjs-load-progress {
+    background: #bfc7d3;
+    background: rgba(115, 133, 159, 0.5);
+}
+
+.video-js .vjs-load-progress div {
+    background: white;
+    background: rgba(115, 133, 159, 0.75);
+}
+
+.btnRep,
+.btnRep>div>button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btnRep>div>button {
+    margin: 5px;
+}
+
+#btnRepeat {
+    position: relative;
+    cursor: pointer;
+}
+
+#btnRepeat {
+    position: relative;
+    cursor: pointer;
+}
+
+#btnRepeat input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+#btnRepeat :checked~.icon-box {
+    box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+#btnRepeat :checked~.icon-box .fa {
+    transform: scale(0.95);
+}
+
+#btnRepeat .icon-box {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background: #FF5F6D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 5px white, 3px 3px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#btnRepeat .icon-box .fa {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+
+/* -------- Social Icons -------- */
+
+.social-icons {
+    display: flex;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 0 0.7rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.social-icon:hover {
+    color: #fff;
+}
+
+.social-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -150%);
+}
+
+.social-icon:active {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) inset;
+}
+
+.social-icon i {
+    position: relative;
+    top: 1px;
+}
+
+
+/* -------- Lista de reproducción -------- */
+
+.preview_playlist {
+    height: auto;
+    width: 100%;
+}
+
+.preview_playlist .row-container {
+    width: 90%;
+    margin: auto;
+    overflow: auto;
+    padding: 30px;
+}
+
+.preview_playlist .row-container .row-header {
+    color: #e5e5e5;
+    margin: 0.5rem 0;
+}
+
+.preview_playlist .row-container .row-image {
+    margin-bottom: calc(var(--tileHeight) / 4);
+    padding-bottom: 2px;
+    transition: transform 0.45s;
+}
+
+.preview_playlist .row-container .row-image .tile {
+    width: var(--tileWidth);
+    height: var(--tileHeight);
+    margin-right: 0.2rem;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.45s;
+    transform-origin: center left;
+}
+
+.preview_playlist .row-container .row-image .tile a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.preview_playlist .row-container .row-image .tile img {
+    width: var(--tileWidth);
+    height: var(--tileHeight);
+    object-fit: cover;
+}
+
+
+/* *****   Hover effects  ***** */
+
+.preview_playlist .row-container .row-image:hover {
+    /* move the whole row towards the left */
+    transform: translate3d(var(--moveLeft), 0, 0);
+}
+
+.preview_playlist .row-container .row-image:hover .tile {
+    /* fade out every tile */
+    opacity: 0.3;
+}
+
+.preview_playlist .row-container .row-image:hover .tile:hover {
+    /* grow the current tile and make it opaque again */
+    transform: scale(var(--growFactor));
+    opacity: 1;
+}
+
+.preview_playlist .row-container .row-image .tile:hover~.tile {
+    /* move all tiles right of the current tile to the right, */
+    /* so its flush against the hovered tile */
+    transform: translate3d(var(--moveRight), 0, 0);
+}
+
+:host ::ng-deep .overCss {
+    background: #2b3431;
+    padding: 18px 22px;
+    font-size: 27px;
+    border-radius: 54px;
+    line-height: 32px;
+}
+
+:host ::ng-deep .mat-icon {
+    color: #ffff;
+}
+
+
+/* Estilos de los formularios */
+
+.quitzForm {
+    /*
+    position: absolute;
+    z-index: 999;
+    background: #ffffff94;
+    display: flex;
+    width: 60%;
+    height: 45%;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffffffd1;
+    left: 20%;
+    */
+    top: 27%;
+    left: 17%;
+    right: 17%;
+    padding: 3rem;
+    position: absolute;
+    z-index: 999;
+    background: #ffffffd1;
+}
+
+.quitzForm>div>button {
+    font-size: 2rem;
+    margin: 1rem 3rem;
+    padding: 12px;
+    box-shadow: 0px 0px 7px 3px #a2a2a2;
+    border-radius: 7px;
+    background: space;
+}
+
+.quitzForm>h1 {
+    font-size: 3rem;
+    margin: 2rem;
+    line-height: 40px;
+}
+
+.buttonsControlPanel {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}

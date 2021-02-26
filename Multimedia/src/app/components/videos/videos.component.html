@@ -1,0 +1,163 @@
+<header>
+    <h1 class="titulo"> Reproductor de vídeo </h1>
+</header>
+<main>
+
+    <div class="contenedor">
+        <div id="instructions">
+            <div *ngIf="this.videoJSplayer && this.videoList &&
+                    this.videoList[this.videoJSplayer.playlist.currentItem()] &&
+                    this.videoList[this.videoJSplayer.playlist.currentItem()].quitz" id="flow_control_buttons">
+                <ng-container *ngFor="let quitz of this.videoList[this.videoJSplayer.playlist.currentItem()].quitz">
+                    <ng-container *ngIf="this.checkTimeForm(quitz)">
+                        <div class="quitzForm">
+                            <h1>{{quitz.question}}</h1>
+                            <div>
+                                <button mat-button *ngFor="let resp of quitz.answers" (click)="checkAnswer(resp, quitz)">{{resp}}</button>
+                            </div>
+
+                            <ng-container *ngIf="quitz.is_correct && quitz.is_correct == 'correcto'">
+                                <h2>¡Respuesta correcta!</h2>
+
+                                <div>
+                                    <button mat-raised-button (click)="continueVideo(quitz)">Continuar</button>
+
+                                    <!-- <mat-icon style="font-size: 60px; color: green">check_circle</mat-icon> -->
+                                </div>
+
+                            </ng-container>
+
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </div>
+            <video id="my_video" class="video-js vjs-default-skin vjs-16-9 vjs-fluid vjs-big-play-centered videojs-selector-quality-hls" width="700px" height="400px" controls preload="none" data-setup='{ "aspectRatio":"700:400", "playbackRates": [1, 1.5, 2] }'>
+                <p class="vjs-no-js">
+                    <a href="http://videojs.com/html5-video-support/" target="_blank">
+                    </a>
+                </p>
+            </video>
+            <br>
+            <div class="btnRep">
+                <div style="flex-direction: row;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;">
+                    <button class="previous" (click)="anterior()">
+                        <i class="material-icons left">arrow_forward_ios</i>Anterior</button>
+                    <button class="next" (click)="posterior()">Siguiente
+                        <i class="material-icons">arrow_forward_ios</i></button>
+                </div>
+
+                <div class="repeat-group">
+                    <button id="btnRepeat" (click)="repetir()">
+                        <div class="icon-box">
+                            <i *ngIf="this.repea_list" class="material-icons" aria-hidden="true"
+                                style="font-size: 38px;">repeat</i>
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="buttonsControlPanel">
+            <button mat-button (click)="openDialog()">
+                <img class="logoyt" src="/assets/img/youtube.png" alt="logo de Youtube" />
+            </button>
+        </div>
+        <h4></h4>
+
+        <!-- Lista de reproducción -->
+        <div class="row-header">
+            Playlist
+        </div>
+
+        <section class="preview_playlist" style="min-height: 300px;">
+            <div class="row-container">
+                <!-- Se rellena con TypeScript -->
+                <div id="play_list" class="row-image">
+                    <div class="tile" *ngFor="let video of this.videoList; let i = index" (click)="changeVideoFromList(video, i)">
+                        <button mat-button (click)="removeVideo(video)">
+                            <mat-icon>remove</mat-icon>
+                        </button>
+                        <img style="max-width: 200px" [src]="video.poster">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="row-header">
+            Lista de vídeos
+        </div>
+
+        <section class="preview_playlist" style="min-height: 300px;">
+            <div class="row-container">
+                <!-- Se rellena con TypeScript -->
+                <div id="play_list" class="row-image">
+                    <div class="tile" *ngFor="let video of this.videoListTotal">
+                        <button mat-button (click)="addVideoPL(video)">
+                            <mat-icon>add</mat-icon>
+                        </button>
+                        <img style="max-width: 200px" [src]="video.poster">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+</main>
+<style>
+    .logoyt {
+        max-width: 100%;
+        width: 90px;
+    }
+    
+    .previous>i,
+    .next>i {
+        width: 15px;
+    }
+    
+    .tile>button {
+        position: absolute;
+        background-color: #0000115e;
+        margin: 4px;
+    }
+    
+    .buttonsControlPanel>button {
+        font-size: 19px;
+        color: #585858;
+    }
+    
+    .buttonsControlPanel {
+        padding: 2rem;
+    }
+    
+    #instructions {
+        text-align: center;
+        margin: 30px auto;
+    }
+    
+    #instructions textarea {
+        width: 100%;
+        height: 100px;
+    }
+    
+    body {
+        background: rgb(255, 255, 255);
+        text-align: center;
+        color: #E6E9ED;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    a,
+    a:hover,
+    a:visited {
+        color: #76DAFF;
+    }
+</style>

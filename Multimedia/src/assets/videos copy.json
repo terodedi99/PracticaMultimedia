@@ -1,0 +1,71 @@
+[{
+        "sources": [{
+            "src": "assets/video1.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video1.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video2.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video2.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video3.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video3.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video4.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video4.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video5.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video5.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video6.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video6.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video7.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video7.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video8.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video8.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video9.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video9.PNG"
+    },
+    {
+        "sources": [{
+            "src": "assets/video10.mp4",
+            "type": "video/mp4"
+        }],
+        "poster": "assets/video10.PNG"
+    }
+]
